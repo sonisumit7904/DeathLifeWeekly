@@ -4,7 +4,9 @@ DeathLifeWeekly is a Chrome extension that serves as a life reminder and calenda
 
 ## Features
 - **Life Reminder & Calendar:** Visualize your life in weeks and receive motivational quotes.
+  ![Life Reminder & Calendar](./assets/front1.png)
 - **Customizable Settings:** Configure your birthdate, expected lifespan, theme, phase colors, and add personal milestones.
+  ![Customizable Settings](./assets/settings.png)
 - **Responsive UI:** Includes smooth tab navigation, zoom functionality, and tooltip details.
 - **Chrome Extension:** Utilizes a background service worker with options and popup pages.
 
