@@ -309,9 +309,9 @@ function updateQuote() {
       const phase = getLifePhase(yearsLived);
       
       // Add phase-specific quote or message
-      const phaseMessage = document.createElement('p');
-      phaseMessage.className = 'phase-message';
-      phaseMessage.innerHTML = `<strong>${phase.name} Phase:</strong> ${phase.message}`;
+      // const phaseMessage = document.createElement('p');
+      // phaseMessage.className = 'phase-message';
+      // phaseMessage.innerHTML = `<strong>${phase.name} Phase:</strong> ${phase.message}`;
       
       // Insert after the author
       const authorElement = document.getElementById('author');
