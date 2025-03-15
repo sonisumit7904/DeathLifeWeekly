@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
     'birthdate', 
     'lifespan', 
     'showReminder', 
-    'showLabels',
     'theme',
     'milestones',
     'phaseColors'
@@ -34,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('lifespan').value = data.lifespan;
     }
     document.getElementById('showReminder').checked = data.showReminder !== false;
-    document.getElementById('showLabels').checked = data.showLabels !== false;
     
     // Theme settings
     const currentTheme = data.theme || 'default';
@@ -68,13 +66,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const birthdate = document.getElementById('birthdate').value;
     const lifespan = document.getElementById('lifespan').value;
     const showReminder = document.getElementById('showReminder').checked;
-    // const showLabels = document.getElementById('showLabels').checked;
 
     chrome.storage.local.set({
       birthdate,
       lifespan: parseInt(lifespan),
-      showReminder,
-      showLabels
+      showReminder
     }, () => {
       const status = document.getElementById('basicStatus');
       status.style.display = 'block';
