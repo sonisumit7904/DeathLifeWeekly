@@ -40,7 +40,6 @@ DeathLifeWeekly is a Chrome extension that serves as a life reminder and calenda
    ```
 
 ## File Structure
-- **.bolt/**: Bolt template configuration files.
 - **src/**: React application files including main entry point, components, and styles.
 - **public/**: Static assets if any.
 - **manifest.json, background.js, popup.html, popup.js**: Chrome extension files.

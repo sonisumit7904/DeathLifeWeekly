@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Life Reminder & Calendar",
+  "name": "DeathLifeWeekly",
   "version": "1.0.0",
   "description": "A reminder of life's brevity with a visual calendar representation",
   "permissions": ["storage", "tabs"],
