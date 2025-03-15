@@ -314,12 +314,12 @@ function updateQuote() {
       // phaseMessage.innerHTML = `<strong>${phase.name} Phase:</strong> ${phase.message}`;
       
       // Insert after the author
-      const authorElement = document.getElementById('author');
-      if (authorElement.nextSibling) {
-        authorElement.parentNode.insertBefore(phaseMessage, authorElement.nextSibling);
-      } else {
-        authorElement.parentNode.appendChild(phaseMessage);
-      }
+      // const authorElement = document.getElementById('author');
+      // if (authorElement.nextSibling) {
+      //   authorElement.parentNode.insertBefore(phaseMessage, authorElement.nextSibling);
+      // } else {
+      //   authorElement.parentNode.appendChild(phaseMessage);
+      // }
     }
   });
 }
