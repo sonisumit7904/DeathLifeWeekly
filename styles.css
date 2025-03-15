@@ -1,0 +1,341 @@
+body {
+  width: 700px;
+  margin: 0;
+  padding: 16px;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  position: relative;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+}
+
+#quote-container {
+  text-align: center;
+  padding: 24px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  margin-bottom: 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.weeks-counter {
+  font-size: 14px;
+  color: #2a9d8f;
+  font-weight: 500;
+}
+
+.icon-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.icon-button:hover {
+  background-color: rgba(42, 157, 143, 0.2);
+  transform: scale(1.1);
+}
+
+.message {
+  font-size: 20px;
+  color: #1a1a1a;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.quote {
+  font-size: 18px;
+  color: #333;
+  font-style: italic;
+  margin: 12px 0;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.author {
+  font-size: 16px;
+  color: #555;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.phase-message {
+  font-size: 15px;
+  color: #4a4a4a;
+  background: #f8f9fa;
+  padding: 8px;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+
+#calendar-container {
+  padding: 24px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  overflow: auto;
+  position: relative;
+  max-height: 500px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.calendar-header h2 {
+  margin: 0;
+  font-size: 16px;
+  color: #1a1a1a;
+}
+
+.legend {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #666;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot.past {
+  background-color: #e63946;
+}
+
+.dot.current {
+  background-color: #2a9d8f;
+}
+
+.dot.future {
+  background-color: #e9ecef;
+}
+
+#life-calendar {
+  position: relative;
+  padding: 4px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  transform-origin: center;
+  transition: transform 0.1s ease-out;
+  min-width: fit-content;
+  margin: 0 auto;
+}
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.week-row {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  position: relative;
+}
+
+.year-label {
+  width: 60px;
+  font-size: 11px;
+  color: #666;
+  margin-right: 8px;
+  text-align: right;
+  position: sticky;
+  left: 0;
+  background: white;
+  z-index: 5;
+  padding-right: 4px;
+}
+
+.month-header {
+  display: flex;
+  /* align-items: center; */
+  gap: 4px;
+  /* margin-left: 68px; space for year labels */
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.month-label {
+  font-size: 10px;
+  color: #666;
+  text-align: center;
+  padding: 2px 4px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.week-cell {
+  width: 6px;
+  height: 6px;
+  border-radius: 1px;
+  transition: all 0.2s;
+  position: relative;
+  cursor: pointer;
+}
+
+.week-cell:hover {
+  transform: scale(1.5);
+  z-index: 10;
+}
+
+.past {
+  background-color: #e63946;
+  animation: fillIn 0.5s ease-out;
+}
+
+.current {
+  background-color: #2a9d8f;
+  animation: pulse 2s infinite;
+}
+
+.future {
+  background-color: #e9ecef;
+}
+
+.month-start {
+  border-left: 3px solid #6c757d; /* Darker and thicker border */
+}
+
+.milestone {
+  border: 2px solid #FFD700 !important; 
+  box-shadow: 0 0 3px rgba(255, 215, 0, 0.6);
+  z-index: 5;
+}
+
+.tooltip {
+  position: absolute;
+  background: #333;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  z-index: 1000;
+  pointer-events: none;
+  max-width: 250px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  line-height: 1.4;
+}
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #333;
+}
+
+/* Animation for transitions */
+@keyframes fillIn {
+  from { opacity: 0; transform: scale(0); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Theme toggles */
+.theme-options {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.theme-option {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.theme-option.active {
+  border-color: #333;
+}
+
+#life-insight {
+  margin-top: 12px;
+  padding: 10px;
+  background: #f0f9ff;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #334155;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* Add month headers styling */
+.month-row {
+  display: flex;
+  margin-left: 68px; /* align with week cells (after year labels) */
+  margin-bottom: 4px;
+  height: 16px;
+}
+
+.month-label {
+  font-size: 9px;
+  color: #495057;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  width: 26px; /* width for 4 weeks */
+  position: relative;
+}
+
+.month-label::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #dee2e6;
+}
+
+/* Improve color contrast for month divisions */
+.alternate-month {
+  background-color: rgba(0,0,0,0.02); /* Very subtle background for alternate months */
+}

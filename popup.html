@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Life Reminder</title>
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div id="quote-container">
+      <div class="header">
+        <span id="weeks-lived" class="weeks-counter"></span>
+        <div class="buttons">
+          <button id="settings-btn" class="icon-button" title="Open Settings">Settings</button>
+        </div>
+      </div>
+      <p id="life-message" class="message"></p>
+      <p id="quote" class="quote"></p>
+      <p id="author" class="author"></p>
+    </div>
+
+    <div class="theme-options" id="theme-selector" style="display: none;">
+      <div class="theme-option" data-theme="default" style="background: linear-gradient(to right, #e63946, #2a9d8f);" title="Default"></div>
+      <div class="theme-option" data-theme="serene" style="background: linear-gradient(to right, #48bfe3, #80ffdb);" title="Serene"></div>
+      <div class="theme-option" data-theme="vintage" style="background: linear-gradient(to right, #ddbea9, #cb997e);" title="Vintage"></div>
+      <div class="theme-option" data-theme="vibrant" style="background: linear-gradient(to right, #f72585, #4cc9f0);" title="Vibrant"></div>
+    </div>
+    
+    <div id="calendar-container">
+      <div class="calendar-header">
+        <h2>Your Life in Weeks</h2>
+        <div class="legend">
+          <span class="legend-item"><span class="dot past"></span> Past</span>
+          <span class="legend-item"><span class="dot current"></span> Current</span>
+          <span class="legend-item"><span class="dot future"></span> Future</span>
+        </div>
+      </div>
+      <p id="life-insight"></p>
+      <div id="life-calendar"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
