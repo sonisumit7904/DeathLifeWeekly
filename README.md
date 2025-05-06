@@ -11,6 +11,19 @@ DeathLifeWeekly is a Chrome extension that serves as a life reminder and calenda
 - **Chrome Extension:** Utilizes a background service worker with options and popup pages.
 
 ## Getting Started
+
+### For End Users
+1. **Download Extension:**  
+   Download the zip file for DeathLifeWeekly.
+2. **Extract Files:**  
+   Extract the downloaded zip file to your preferred location.
+3. **Load the Extension in Chrome:**  
+   - Open Chrome and navigate to `chrome://extensions/`
+   - Enable **Developer mode** by toggling the switch at the top right.
+   - Click on the **Load unpacked** button.
+   - Select the folder where you extracted the extension files.
+
+### For Developers
 1. **Clone the Repository:**
    ```bash
    git clone <repository-url>
